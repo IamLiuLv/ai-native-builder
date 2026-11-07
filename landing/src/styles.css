@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* Design tokens — the book's own brand, read from research/brand.json (pnpm capture):
+   paper background, ink text, vermilion primary, serif headings. */
+@theme {
+  --color-bg: #f3ede1;
+  --color-surface: #fbf8f1;
+  --color-elevated: #f1eadc;
+  --color-line: #e4dccb;
+  --color-ink: #23201a;
+  --color-muted: #5b554a;
+  --color-subtle: #8a8273;
+  --color-primary: #c8452c;
+  --color-secondary: #3d5a9e;
+  --color-warn: #b07d14;
+  --color-danger: #a3271b;
+  --font-sans: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-display: "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+/* Dark: the book's own dark palette (docs/.vitepress/theme/custom.css). The class is set
+   from the reader's choice in the book — see src/engine/theme.ts. */
+.dark {
+  --color-bg: #151310;
+  --color-surface: #1b1915;
+  --color-elevated: #23201b;
+  --color-line: #34302a;
+  --color-ink: #ece5d6;
+  --color-muted: #bfb6a4;
+  --color-subtle: #8c8475;
+  --color-primary: #e2795e;
+  --color-secondary: #8ea6e0;
+  --color-warn: #e0b04a;
+  --color-danger: #e2795e;
+  color-scheme: dark;
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+/* The stage the product's screens sit on. Plain by default: only add a texture (dots,
+   grid, paper) when it is part of the PRODUCT's own look — e.g. a canvas product. */
+.story-stage {
+  background-color: var(--color-bg);
+}
+.story-stage.texture-dots {
+  background-image: radial-gradient(rgb(0 0 0 / 0.12) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.dark .story-stage.texture-dots {
+  background-image: radial-gradient(rgb(255 255 255 / 0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Gradients are written with literal rgb() stops, not Tailwind's from-/to- utilities:
+   Tailwind v4 emits oklab() stops, which older Chromium kernels (e.g. some in-app
+   webviews) drop — and the whole gradient with them. */
+.hero-glow {
+  background-image: radial-gradient(60% 50% at 50% 0%, rgb(0 0 0 / 0.06), rgb(0 0 0 / 0));
+}
+.dark .hero-glow {
+  background-image: radial-gradient(60% 50% at 50% 0%, rgb(226 121 94 / 0.10), rgb(226 121 94 / 0));
+}
+
+@keyframes caption-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes panel-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes row-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+.animate-caption { animation: caption-in 0.5s ease-out both; }
+.animate-panel { animation: panel-in 0.3s ease-out both; }
+.animate-row { animation: row-in 0.25s ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-caption,
+  .animate-panel,
+  .animate-row { animation: none; }
+}

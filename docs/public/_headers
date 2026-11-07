@@ -1,0 +1,4 @@
+# 静态托管（如 Cloudflare Pages）按这里加响应头。
+# .md 文件默认没有 charset，浏览器会按本地编码（中文系统多是 GBK）解码，中文就成了乱码。
+/install-tutor.md
+  Content-Type: text/markdown; charset=utf-8

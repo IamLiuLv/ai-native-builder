@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1260 360" role="img" aria-labelledby="t d" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+<title id="t">三角模型转了五圈</title>
+<desc id="d">官网从 0 到 1 的五轮迭代，每一轮都是一次完整的定义、验证、恢复；三条边从虚线变成粗实线，表示每转一圈交付质量更稳。</desc>
+<rect width="1260" height="360" rx="18" fill="#f7f3ea"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#8a8273"/></marker></defs>
+<line x1="110" y1="170" x2="162" y2="250" stroke="#2f7d6d" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="162" y1="250" x2="58" y2="250" stroke="#3d5a9e" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="58" y1="250" x2="110" y2="170" stroke="#c08a1e" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="6 6"/>
+<circle cx="110" cy="170" r="5" fill="#2f7d6d"/>
+<circle cx="162" cy="250" r="5" fill="#3d5a9e"/>
+<circle cx="58" cy="250" r="5" fill="#c08a1e"/>
+<text x="110" y="292" fill="#23201a" font-size="18" font-weight="700" text-anchor="middle">第 1 圈</text>
+<text x="110" y="316" fill="#5b554a" font-size="15" text-anchor="middle">模糊目标</text>
+<line x1="172" y1="230" x2="256" y2="230" stroke="#8a8273" stroke-width="1.6" marker-end="url(#ar)"/>
+<line x1="330" y1="148" x2="394" y2="250" stroke="#2f7d6d" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="394" y1="250" x2="266" y2="250" stroke="#3d5a9e" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="266" y1="250" x2="330" y2="148" stroke="#c08a1e" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="6 6"/>
+<circle cx="330" cy="148" r="5" fill="#2f7d6d"/>
+<circle cx="394" cy="250" r="5" fill="#3d5a9e"/>
+<circle cx="266" cy="250" r="5" fill="#c08a1e"/>
+<text x="330" y="292" fill="#23201a" font-size="18" font-weight="700" text-anchor="middle">第 2 圈</text>
+<text x="330" y="316" fill="#5b554a" font-size="15" text-anchor="middle">演示要真</text>
+<line x1="404" y1="230" x2="472" y2="230" stroke="#8a8273" stroke-width="1.6" marker-end="url(#ar)"/>
+<line x1="560" y1="126" x2="638" y2="250" stroke="#2f7d6d" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="638" y1="250" x2="482" y2="250" stroke="#3d5a9e" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="482" y1="250" x2="560" y2="126" stroke="#c08a1e" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="6 6"/>
+<circle cx="560" cy="126" r="5" fill="#2f7d6d"/>
+<circle cx="638" cy="250" r="5" fill="#3d5a9e"/>
+<circle cx="482" cy="250" r="5" fill="#c08a1e"/>
+<text x="560" y="292" fill="#23201a" font-size="18" font-weight="700" text-anchor="middle">第 3 圈</text>
+<text x="560" y="316" fill="#5b554a" font-size="15" text-anchor="middle">多端炫技</text>
+<line x1="648" y1="230" x2="714" y2="230" stroke="#8a8273" stroke-width="1.6" marker-end="url(#ar)"/>
+<line x1="820" y1="100" x2="916" y2="250" stroke="#2f7d6d" stroke-width="5.5" stroke-linecap="round"/>
+<line x1="916" y1="250" x2="724" y2="250" stroke="#3d5a9e" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="724" y1="250" x2="820" y2="100" stroke="#c08a1e" stroke-width="3.2" stroke-linecap="round"/>
+<circle cx="820" cy="100" r="5" fill="#2f7d6d"/>
+<circle cx="916" cy="250" r="5" fill="#3d5a9e"/>
+<circle cx="724" cy="250" r="5" fill="#c08a1e"/>
+<text x="820" y="292" fill="#23201a" font-size="18" font-weight="700" text-anchor="middle">第 4 圈</text>
+<text x="820" y="316" fill="#5b554a" font-size="15" text-anchor="middle">收窄范围，一个故事</text>
+<line x1="926" y1="230" x2="980" y2="230" stroke="#8a8273" stroke-width="1.6" marker-end="url(#ar)"/>
+<line x1="1110" y1="60" x2="1230" y2="250" stroke="#2f7d6d" stroke-width="5.5" stroke-linecap="round"/>
+<line x1="1230" y1="250" x2="990" y2="250" stroke="#3d5a9e" stroke-width="5.5" stroke-linecap="round"/>
+<line x1="990" y1="250" x2="1110" y2="60" stroke="#c08a1e" stroke-width="5.5" stroke-linecap="round"/>
+<circle cx="1110" cy="60" r="5" fill="#2f7d6d"/>
+<circle cx="1230" cy="250" r="5" fill="#3d5a9e"/>
+<circle cx="990" cy="250" r="5" fill="#c08a1e"/>
+<text x="1110" y="292" fill="#23201a" font-size="18" font-weight="700" text-anchor="middle">第 5 圈</text>
+<text x="1110" y="316" fill="#5b554a" font-size="15" text-anchor="middle">沉淀成交付模型</text>
+<text x="24" y="36" fill="#8a8273" font-size="14">虚线 = 这条边很弱，粗实线 = 这条边立住了</text>
+<line x1="830" y1="31" x2="856" y2="31" stroke="#2f7d6d" stroke-width="4" stroke-linecap="round"/><text x="864" y="36" fill="#23201a" font-size="14">定义正确</text>
+<line x1="970" y1="31" x2="996" y2="31" stroke="#3d5a9e" stroke-width="4" stroke-linecap="round"/><text x="1004" y="36" fill="#23201a" font-size="14">验证正确</text>
+<line x1="1110" y1="31" x2="1136" y2="31" stroke="#c08a1e" stroke-width="4" stroke-linecap="round"/><text x="1144" y="36" fill="#23201a" font-size="14">失败可恢复</text>
+</svg>

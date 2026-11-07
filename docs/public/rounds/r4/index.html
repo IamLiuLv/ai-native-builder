@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CanvasAgents</title>
+
+    <!-- PWA shell. The manifest and icons live in public/ so their URLs never
+         gain a build hash — /sw.js is registered by fixed path (src/push/) and
+         iOS reads apple-touch-icon by convention. theme-color matches the dark
+         bg-layout token; the app is installed from its dark, terminal-native
+         face, and the status bar should not flash white around it. -->
+    <link rel="manifest" href="/rounds/r4/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/rounds/r4/apple-touch-icon.png" />
+    <!-- The tab icon. Without it the browser asks for /favicon.ico, which nothing
+         serves, and the tab shows a blank page glyph. The PWA icon is reused
+         rather than a separate .ico so there is one image to keep in sync. -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/rounds/r4/icon-192.png" />
+    <meta name="theme-color" content="#12161C" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- iOS-specific: without it Safari ignores display:standalone. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Canvas" />
+
+    <!--
+      Theme, applied before first paint. This is the one real cost of the
+      `.dark` class strategy (ADR 0002): the class comes from JS reading
+      localStorage, so without this the first frame paints the wrong theme and
+      the module bundle below corrects it a moment later — a white flash for
+      every dark-mode user, on every load.
+
+      It must stay INLINE and NOT be `type="module"`: a module script is
+      deferred, which puts it after first paint and defeats the whole point.
+      Vite leaves inline classic scripts in <head> exactly where they are, so
+      this survives the build untouched.
+
+      Kept in sync with theme.ts by hand — deliberately duplicated rather than
+      imported, because importing anything here would make it a module. The
+      storage key is the coupling: "app-theme" in both places.
+    -->
+    <script>
+      (function () {
+        try {
+          var choice = localStorage.getItem("app-theme");
+          var dark =
+            choice === "dark" ||
+            ((choice === null || choice === "system") &&
+              matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.classList.toggle("dark", dark);
+        } catch (e) {
+          // Storage blocked (private mode / partitioned context). Light is the
+          // documented default, and the app corrects itself once it mounts.
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/rounds/r4/assets/index-CU70BARL.js"></script>
+    <link rel="stylesheet" crossorigin href="/rounds/r4/assets/index-BD21Zl0i.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

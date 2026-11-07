@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 600" role="img" aria-labelledby="t d" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <title id="t">AI Native 交付质量三角模型</title>
+  <desc id="d">三个顶点：定义正确、验证正确、失败可恢复，共同支撑中心的交付质量；三条边带箭头，按定义、验证、恢复的顺序循环，恢复中学到的东西回流到下一次定义。</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8a8273"/>
+    </marker>
+  </defs>
+  <rect width="760" height="600" rx="20" fill="#f7f3ea"/>
+  <!-- 三角形底面 -->
+  <path d="M380 110 L620 470 L140 470 Z" fill="#efe8da" stroke="#d9cfba" stroke-width="2"/>
+  <!-- 循环箭头：沿三条边，略向外偏移 -->
+  <path d="M410 128 L612 432" stroke="#8a8273" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+  <path d="M580 498 L178 498" stroke="#8a8273" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+  <path d="M130 438 L338 128" stroke="#8a8273" stroke-width="2.5" fill="none" stroke-dasharray="7 6" marker-end="url(#a)"/>
+  <text x="560" y="262" fill="#8a8273" font-size="15">交给 AI 执行</text>
+  <text x="380" y="528" fill="#8a8273" font-size="15" text-anchor="middle">发布上线</text>
+  <text x="116" y="262" fill="#8a8273" font-size="15">经验回流</text>
+  <text x="116" y="282" fill="#8a8273" font-size="13">下一次定义更准</text>
+  <!-- 中心 -->
+  <text x="380" y="352" fill="#23201a" font-size="30" font-weight="700" text-anchor="middle">交付质量</text>
+  <text x="380" y="384" fill="#8a8273" font-size="14" text-anchor="middle">三条边缺一不可</text>
+  <!-- 顶点：定义正确 -->
+  <circle cx="380" cy="110" r="14" fill="#2f7d6d"/>
+  <text x="380" y="58" fill="#2f7d6d" font-size="24" font-weight="700" text-anchor="middle">定义正确</text>
+  <text x="380" y="82" fill="#5b554a" font-size="14" text-anchor="middle">什么是对的？· AI 动手之前</text>
+  <!-- 顶点：验证正确 -->
+  <circle cx="620" cy="470" r="14" fill="#3d5a9e"/>
+  <text x="640" y="560" fill="#3d5a9e" font-size="24" font-weight="700" text-anchor="middle">验证正确</text>
+  <text x="640" y="584" fill="#5b554a" font-size="14" text-anchor="middle">它真的做对了吗？· 发布之前</text>
+  <!-- 顶点：失败可恢复 -->
+  <circle cx="140" cy="470" r="14" fill="#b07d14"/>
+  <text x="128" y="560" fill="#b07d14" font-size="24" font-weight="700" text-anchor="middle">失败可恢复</text>
+  <text x="128" y="584" fill="#5b554a" font-size="14" text-anchor="middle">出错了怎么办？· 上线之后</text>
+</svg>

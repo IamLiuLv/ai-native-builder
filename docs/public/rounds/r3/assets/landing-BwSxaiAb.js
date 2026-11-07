@@ -1,0 +1,1 @@
+import{n as e}from"./Match-DC8buA5J.js";var t=e;export{t as component};

@@ -1,0 +1,116 @@
+{
+  "home": {
+    "src": "shots/home.png",
+    "srcDark": "shots/home-dark.png",
+    "phone": "shots/home-phone.png",
+    "url": "http://localhost:5180/",
+    "w": 1280,
+    "h": 983,
+    "focus": {
+      "hero": {
+        "x": 64,
+        "y": 144,
+        "w": 592,
+        "h": 348
+      },
+      "features": {
+        "x": 0,
+        "y": 548,
+        "w": 1280,
+        "h": 202
+      }
+    }
+  },
+  "definition": {
+    "src": "shots/definition.png",
+    "srcDark": "shots/definition-dark.png",
+    "phone": "shots/definition-phone.png",
+    "url": "http://localhost:5180/book/part-1/01-definition",
+    "w": 1280,
+    "h": 2400,
+    "focus": {
+      "lead": {
+        "x": 336,
+        "y": 172,
+        "w": 624,
+        "h": 70
+      }
+    }
+  },
+  "why": {
+    "src": "shots/why.png",
+    "srcDark": "shots/why-dark.png",
+    "phone": "shots/why-phone.png",
+    "url": "http://localhost:5180/book/part-2/05-inevitable",
+    "w": 1280,
+    "h": 2173,
+    "focus": {
+      "lead": {
+        "x": 336,
+        "y": 172,
+        "w": 624,
+        "h": 70
+      },
+      "table": {
+        "x": 336,
+        "y": 413,
+        "w": 624,
+        "h": 213
+      }
+    }
+  },
+  "triangle": {
+    "src": "shots/triangle.png",
+    "srcDark": "shots/triangle-dark.png",
+    "phone": "shots/triangle-phone.png",
+    "url": "http://localhost:5180/book/part-3/06-triangle",
+    "w": 1280,
+    "h": 2400,
+    "focus": {
+      "figure": {
+        "x": 336,
+        "y": 621,
+        "w": 624,
+        "h": 525
+      }
+    }
+  },
+  "withSkill": {
+    "src": "shots/withSkill.png",
+    "srcDark": "shots/withSkill-dark.png",
+    "phone": "shots/withSkill-phone.png",
+    "url": "http://localhost:5180/book/part-3/07-case-with-skill",
+    "w": 1280,
+    "h": 2400,
+    "focus": {
+      "lead": {
+        "x": 336,
+        "y": 172,
+        "w": 624,
+        "h": 102
+      },
+      "prompt": {
+        "x": 336,
+        "y": 1349,
+        "w": 624,
+        "h": 30
+      }
+    }
+  },
+  "rounds": {
+    "src": "shots/rounds.png",
+    "srcDark": "shots/rounds-dark.png",
+    "phone": "shots/rounds-phone.png",
+    "url": "http://localhost:5180/book/part-3/08-case-from-zero",
+    "w": 1280,
+    "h": 2400,
+    "focus": {
+      "figure": {
+        "x": 336,
+        "y": 451,
+        "w": 624,
+        "h": 212
+      }
+    }
+  }
+}

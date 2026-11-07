@@ -1,0 +1,1 @@
+var e=`#1A2029`,t=`#4A5563`,n=`#6B7686`,r=`#FFFFFF`,i=`#F2F4F7`,a=`#E9EDF2`,o=`#D2D8E0`,s=`#12874F`,c=`#0E6B3F`,l=`#E3F6EC`,u=`mx-auto w-full max-w-[1180px] px-5 sm:px-8 lg:px-12`,d=`font-mono text-[11px] uppercase tracking-[0.18em]`;export{r as a,s as c,o as d,u as f,t as i,c as l,e as n,i as o,n as r,a as s,d as t,l as u};

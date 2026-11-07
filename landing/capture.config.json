@@ -1,0 +1,12 @@
+{
+  "base": "http://localhost:5180",
+  "schemes": ["light", "dark"],
+  "pages": [
+    { "name": "home", "path": "/", "focus": { "hero": ".VPHero .main", "features": ".VPFeatures" } },
+    { "name": "definition", "path": "/book/part-1/01-definition", "focus": { "lead": ".vp-doc .lead" } },
+    { "name": "why", "path": "/book/part-2/05-inevitable", "focus": { "lead": ".vp-doc .lead", "table": ".vp-doc table" } },
+    { "name": "triangle", "path": "/book/part-3/06-triangle", "focus": { "figure": ".vp-doc figure" } },
+    { "name": "withSkill", "path": "/book/part-3/07-case-with-skill", "focus": { "lead": ".vp-doc .lead", "prompt": ".vp-doc blockquote" } },
+    { "name": "rounds", "path": "/book/part-3/08-case-from-zero", "focus": { "figure": ".vp-doc figure" } }
+  ]
+}

@@ -1,0 +1,1 @@
+var e=6e4,t=60*e,n=24*t;function r(r){return r<e?`刚刚`:r<t?`${Math.floor(r/e)} 分钟前`:r<n?`${Math.floor(r/t)} 小时前`:r<2*n?`昨天`:`${Math.floor(r/n)} 天前`}export{r as t};

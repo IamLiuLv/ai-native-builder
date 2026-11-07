@@ -1,0 +1,45 @@
+{
+  "title": "成为 AI Native Builder",
+  "description": "一个人 + AI，用 AI 原生的方式，构建从需求到交付的完整闭环。",
+  "themeColor": "#fbf8f1",
+  "colors": {
+    "background": "rgb(251, 248, 241)",
+    "text": "rgb(35, 32, 26)",
+    "heading": "rgb(35, 32, 26)",
+    "link": "rgb(184, 62, 38)",
+    "primaryButton": "rgb(200, 69, 44)",
+    "primaryButtonText": "rgb(255, 250, 242)"
+  },
+  "fonts": {
+    "body": "-apple-system, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", sans-serif",
+    "heading": "\"Noto Serif SC\", \"Songti SC\", STSong, SimSun, serif"
+  },
+  "headings": [
+    "成为 AI Native Builder一个人 + AI，构建从需求到交付的完整闭环",
+    "第一部分 · 是什么",
+    "第二部分 · 为什么",
+    "第三部分 · 怎么成为"
+  ],
+  "nav": [
+    {
+      "text": "官网",
+      "href": "/landing/index.html"
+    },
+    {
+      "text": "开始阅读",
+      "href": "/book/preface"
+    },
+    {
+      "text": "大纲",
+      "href": "/book/outline"
+    },
+    {
+      "text": "课程",
+      "href": "https://canvasagents.dev/course"
+    },
+    {
+      "text": "交个朋友",
+      "href": "/friends"
+    }
+  ]
+}

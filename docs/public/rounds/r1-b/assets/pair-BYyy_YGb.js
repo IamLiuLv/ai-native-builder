@@ -1,0 +1,1 @@
+import{t as e}from"./shell-Cqw1li06.js";import{t}from"./jsx-runtime-BpzPEenQ.js";import{n}from"./auth-k-y1JhOz.js";var r=t();function i(){return(0,r.jsx)(e,{children:(0,r.jsx)(n,{})})}export{i as component};
