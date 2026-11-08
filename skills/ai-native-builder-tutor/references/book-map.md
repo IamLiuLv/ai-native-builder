@@ -148,8 +148,8 @@
 - 讲什么：从官网放大到完整产品研发；自己摸索 vs 站在已经走通的路上（课程）；怎么选；下一个需求先问三个问题
 - 小节：
   - [从一个官网，到一个完整的产品](https://iamlv.cn/book/part-3/09-two-roads#从一个官网-到一个完整的产品)
-  - [第一条路：自己摸索](https://iamlv.cn/book/part-3/09-two-roads#第一条路-自己摸索)
-  - [第二条路：让 AI 辅助你来做](https://iamlv.cn/book/part-3/09-two-roads#第二条路-让-ai-辅助你来做)
+  - [第一条路：自己摸索，让 AI 辅助你来做](https://iamlv.cn/book/part-3/09-two-roads#第一条路-自己摸索-让-ai-辅助你来做)
+  - [第二条路：走一条捷径](https://iamlv.cn/book/part-3/09-two-roads#第二条路-走一条捷径)
   - [怎么选](https://iamlv.cn/book/part-3/09-two-roads#怎么选)
 
 ## 附录 A · 产品演示官网交付模型

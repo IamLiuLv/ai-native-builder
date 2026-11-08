@@ -69,7 +69,7 @@ unzip product-demo-site.zip -d <你的项目>/.claude/skills/
 
 对 Agent 说：
 
-> 用 product-demo-site 给我的产品做一个演示官网：https://your-product.com
+> 用 product-demo-site 给我的产品做一个演示官网：{你的产品链接}
 
 只有代码库也可以：
 

@@ -37,4 +37,3 @@ next: false
 ## 其他地方
 
 - [CanvasAgents](https://canvasagents.dev/)：我一个人 + AI 做出来的产品，也是这本小册里很多实践的来源；
-- [《AI 赋能前端研发从 0 ～ 1》](https://ai.iamlv.cn/)：我的上一本开源小册。

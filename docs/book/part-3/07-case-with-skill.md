@@ -27,7 +27,7 @@
 
 然后说一句：
 
-> 用 product-demo-site 给我的产品做一个演示官网：https://your-product.com
+> 用 product-demo-site 给我的产品做一个演示官网：{你的产品链接}
 
 剩下的「定义」工作，Agent 自己去做：
 
