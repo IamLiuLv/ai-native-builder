@@ -3,3 +3,5 @@ docs/.vitepress/cache
 docs/.vitepress/dist
 landing/node_modules
 scripts
+.pnpm-store
+.canvasagents

@@ -1,5 +1,17 @@
 import { defineConfig } from "vitepress";
 
+const SITE_URL = "https://iamlv.cn";
+const SITE_TITLE = "成为 AI Native Builder";
+const SITE_DESCRIPTION = "一个人 + AI，用 AI 原生的方式，构建从需求到交付的完整闭环。";
+const SOCIAL_IMAGE = `${SITE_URL}/images/landing-v2-triangle.png`;
+
+function cleanUrlFor(relativePath) {
+  const route = relativePath
+    .replace(/(^|\/)index\.md$/, "$1")
+    .replace(/\.md$/, "");
+  return route ? `/${route}` : "/";
+}
+
 // 侧边栏即全书目录。章节编号写进 text 里，读者在任何一页都能看到自己在全书的哪个位置。
 const sidebar = [
   {
@@ -49,19 +61,64 @@ export default defineConfig({
   title: "成为 AI Native Builder",
   description: "一个人 + AI，用 AI 原生的方式，构建从需求到交付的完整闭环。",
   cleanUrls: true,
+  sitemap: {
+    hostname: SITE_URL,
+    transformItems(items) {
+      return [
+        ...items.filter((item) => !item.url.replace(/^\//, "").startsWith("public/")),
+        {
+          url: "/landing/",
+          changefreq: "monthly",
+          priority: 0.8,
+        },
+      ];
+    },
+  },
   // /landing/ 是小册官网，/rounds/ 是第 8 章每一圈的历史官网，/downloads/ 是交付模型压缩包：都是静态产物，不是 Markdown 页面。
   ignoreDeadLinks: [/^\/landing\//, /^\/downloads\//, /^\/rounds\//],
   lastUpdated: false,
   // 默认浅色（纸张），读者可以切换到深色。
   appearance: true,
+  transformHead({ pageData }) {
+    if (pageData.isNotFound) return [];
+
+    const canonical = `${SITE_URL}${cleanUrlFor(pageData.relativePath)}`;
+    const title = pageData.title || SITE_TITLE;
+    const description = pageData.description || SITE_DESCRIPTION;
+    return [
+      ["link", { rel: "canonical", href: canonical }],
+      ["meta", { property: "og:type", content: pageData.relativePath === "index.md" ? "website" : "article" }],
+      ["meta", { property: "og:locale", content: "zh_CN" }],
+      ["meta", { property: "og:site_name", content: SITE_TITLE }],
+      ["meta", { property: "og:title", content: title }],
+      ["meta", { property: "og:description", content: description }],
+      ["meta", { property: "og:url", content: canonical }],
+      ["meta", { property: "og:image", content: SOCIAL_IMAGE }],
+      ["meta", { property: "og:image:width", content: "1440" }],
+      ["meta", { property: "og:image:height", content: "900" }],
+      ["meta", { name: "twitter:card", content: "summary_large_image" }],
+      ["meta", { name: "twitter:title", content: title }],
+      ["meta", { name: "twitter:description", content: description }],
+      ["meta", { name: "twitter:image", content: SOCIAL_IMAGE }],
+    ];
+  },
   head: [
     ["link", { rel: "icon", type: "image/svg+xml", href: "/logo.svg" }],
     ["meta", { name: "theme-color", content: "#fbf8f1" }],
+    [
+      "script",
+      { type: "text/javascript" },
+      `(function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "za8e2uieao");`,
+    ],
   ],
   themeConfig: {
     logo: "/logo.svg",
     nav: [
-      { text: "官网", link: "/landing/index.html", target: "_self" },
+      { text: "官网", link: "/landing/", target: "_self" },
       { text: "开始阅读", link: "/book/preface" },
       { text: "大纲", link: "/book/outline" },
       { text: "交个朋友", link: "/friends" },

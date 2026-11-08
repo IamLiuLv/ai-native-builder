@@ -5,7 +5,7 @@
 > AI Native Builder：一个人 + AI，用 AI 原生的方式，构建从需求到交付的完整闭环。
 
 - **在线阅读**：[iamlv.cn](https://iamlv.cn)（强烈建议从头读到尾，大约 1 小时）
-- **小册官网**：[iamlv.cn/landing](https://iamlv.cn/landing/index.html)
+- **小册官网**：[iamlv.cn/landing](https://iamlv.cn/landing/)
 - **交个朋友**：[iamlv.cn/friends](https://iamlv.cn/friends)
 - **GitHub**：[github.com/IamLiuLv/ai-native-builder](https://github.com/IamLiuLv/ai-native-builder)，觉得有用的话点个 Star，不迷路
 
@@ -56,6 +56,12 @@ unzip ai-native-builder-tutor.zip -d ~/.claude/skills/
 ### 产品演示官网交付模型：product-demo-site
 
 第 7、8 章的交付模型。给它一个产品链接或代码库，它会研究产品、截取真实界面、起草方案、逐幕验证，做出一个一镜到底的产品演示官网。这本小册的官网就是用它做的。见小册[附录 A](https://iamlv.cn/book/appendix/skill)。
+
+## 部署
+
+推送到 `main` 后，GitHub Actions 会自动构建 `docs/.vitepress/dist`，完整同步到阿里云 OSS 的 `lv-profile` Bucket，并清理旧对象。
+
+首次启用前，需要在仓库 Actions Secrets 中配置 `OSS_ACCESS_KEY_ID` 和 `OSS_ACCESS_KEY_SECRET`。本地部署命令、增量覆盖与完整清理的区别见 [deploy/README.md](deploy/README.md)。
 
 ## 协议
 

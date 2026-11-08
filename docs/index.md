@@ -17,7 +17,7 @@ hero:
       link: /book/outline
     - theme: alt
       text: 看看这本书的官网
-      link: /landing/index.html
+      link: /landing/
       target: _self
 
 features:

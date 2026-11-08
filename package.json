@@ -5,15 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev docs",
-    "build": "pnpm build:landing && vitepress build docs",
-    "build:landing": "cd landing && pnpm install && SITE_BASE=/landing/ SITE_OUT_DIR=../docs/public/landing pnpm build",
+    "build": "pnpm build:landing && pnpm build:docs",
+    "build:landing": "cd landing && pnpm install --frozen-lockfile && SITE_BASE=/landing/ SITE_OUT_DIR=../docs/public/landing pnpm build",
     "preview": "vitepress preview docs",
     "pack:skill": "cd skills && rm -f ../docs/public/downloads/product-demo-site.zip && zip -qr ../docs/public/downloads/product-demo-site.zip product-demo-site -x '*/node_modules/*' '*/dist/*'",
     "verify:landing": "cd landing && VERIFY_URL=http://localhost:4173/landing/ node e2e/verify.mjs",
-    "build:docs": "vitepress build docs",
-    "pack:tutor": "printf '\\357\\273\\277' > docs/public/install-tutor.md && cat install-tutor.md >> docs/public/install-tutor.md && vitepress build docs && python3 scripts/build-tutor.py && cd skills && rm -f ../docs/public/downloads/ai-native-builder-tutor.zip && zip -qr ../docs/public/downloads/ai-native-builder-tutor.zip ai-native-builder-tutor -x '*/.DS_Store'"
+    "build:docs": "vitepress build docs && node deploy/create-clean-url-aliases.mjs",
+    "pack:tutor": "printf '\\357\\273\\277' > docs/public/install-tutor.md && cat install-tutor.md >> docs/public/install-tutor.md && vitepress build docs && python3 scripts/build-tutor.py && cd skills && rm -f ../docs/public/downloads/ai-native-builder-tutor.zip && zip -qr ../docs/public/downloads/ai-native-builder-tutor.zip ai-native-builder-tutor -x '*/.DS_Store'",
+    "deploy:oss": "node deploy/upload-oss.mjs"
   },
   "devDependencies": {
+    "ali-oss": "^6.23.0",
     "vitepress": "^1.6.4",
     "vue": "^3.5.13"
   }

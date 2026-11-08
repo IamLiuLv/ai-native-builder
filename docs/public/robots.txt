@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /public/
+Disallow: /rounds/
+
+Sitemap: https://iamlv.cn/sitemap.xml
